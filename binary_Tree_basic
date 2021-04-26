@@ -83,7 +83,7 @@ def is_full_binary_tree(tree: Node) -> bool:
         return True
     if tree.left and tree.right:   #  左右都不为空的情况
         return is_full_binary_tree(tree.left) and is_full_binary_tree(tree.right)
-    else:
+    else:                           # 至少一方为空的情况
         return not tree.left and not tree.right
 
 # ---------------------------------------------------------------------------------------------
